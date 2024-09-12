@@ -21,9 +21,10 @@ const Experience: React.FC<ExperienceProps> = ({ jobs }) => (
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
         className="py-12"
+        id='experience'
     >
         <h2 className="text-4xl font-bold mb-4 text-center text-blue-400 mb-6">Trayectoria Profesional</h2>
-        <Carousel className="w-full max-w-4xl mx-auto">
+        <Carousel className="w-full max-w-[70vw] md:max-w-4xl mx-auto">
             <CarouselContent>
                 {jobs.map((job, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">

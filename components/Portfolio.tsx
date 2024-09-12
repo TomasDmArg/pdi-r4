@@ -16,7 +16,7 @@ export default function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
   const [isNavSticky, setIsNavSticky] = useState(false);
 
-  const sections = ['summary', 'experience', 'projects', 'skills', 'education'];
+  const sections = ['summary', 'experience', 'projects', 'skills'];
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;

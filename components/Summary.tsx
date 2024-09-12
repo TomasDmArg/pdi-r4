@@ -39,7 +39,7 @@ const Summary = () => {
       ref={ref}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-blue-400">Resumen</h2>
+        <h2 className="text-4xl font-bold mb-8 text-blue-400">Summary</h2>
         <div className="bg-gray-800 text-white max-w-4xl mx-auto p-6 rounded-lg">
           <p className="text-xl leading-relaxed">
             {text}
