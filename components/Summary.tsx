@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Summary = () => {
   const [text, setText] = useState('');
-  const fullText = "Desarrollador full stack innovador con pasión por crear soluciones de vanguardia en DeFi y mejorar las experiencias de usuario. Con experiencia en React/Next.js, TypeScript y tecnologías blockchain, aporto una combinación única de habilidad técnica y resolución creativa de problemas a cada proyecto.";
+  const fullText = "Innovative full stack developer passionate about creating cutting-edge DeFi solutions and enhancing user experiences. Skilled in React/Next.js, TypeScript, and blockchain technologies, I bring a unique blend of technical ability and creative problem-solving to every project.";
   const controls = useAnimation();
   const [ref, inView] = useInView();
 

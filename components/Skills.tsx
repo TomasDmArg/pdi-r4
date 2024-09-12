@@ -29,7 +29,7 @@ const Skills: React.FC<SkillsProps> = ({ skillSets }) => (
         className="py-16 px-4"
         id='skills'
     >
-        <h2 className="text-4xl font-bold text-center mb-12 text-blue-400">Habilidades</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-blue-400">Skills</h2>
         <div className="flex flex-wrap justify-center gap-8">
             {skillSets.map((skillSet, index) => (
                 <motion.div

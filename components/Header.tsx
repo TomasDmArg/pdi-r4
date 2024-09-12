@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaTelegram } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -16,6 +17,11 @@ const Header: React.FC = () => {
   const handleLocationClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.open('https://www.google.com/maps/place/Mar+del+Plata,+Buenos+Aires+Province,+Argentina', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.open('https://t.me/tomasdm', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -48,18 +54,34 @@ const Header: React.FC = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <a href="#" onClick={handleLocationClick} className="flex items-center text-lg hover:text-blue-300 transition-colors">
+          <Link href="https://www.google.com/maps/place/Mar+del+Plata,+Buenos+Aires+Province,+Argentina" target="_blank" rel="noopener noreferrer" className="flex items-center text-lg hover:text-blue-300 transition-colors">
             <FaMapMarkerAlt className="mr-2" />
             <span>Mar del Plata, Argentina</span>
-          </a>
-          <a href="#" onClick={handleEmailClick} className="flex items-center text-lg hover:text-blue-300 transition-colors">
+          </Link>
+          <Link href="mailto:tomas@tdm.ar" className="flex items-center text-lg hover:text-blue-300 transition-colors">
             <FaEnvelope className="mr-2" />
             <span>tomas@tdm.ar</span>
-          </a>
-          <a href="#" onClick={handleLinkedInClick} className="flex items-center text-lg hover:text-blue-300 transition-colors">
+          </Link>
+          <Link href="https://www.linkedin.com/in/tomasdm/" target="_blank" rel="noopener noreferrer" className="flex items-center text-lg hover:text-blue-300 transition-colors">
             <FaLinkedin className="mr-2" />
             <span>LinkedIn</span>
-          </a>
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="mt-8"
+        >
+          <Link 
+            href="https://t.me/tomasdm" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors"
+          >
+            <FaTelegram className="mr-2" />
+            <span>Contact me</span>
+          </Link>
         </motion.div>
       </div>
     </motion.header>

@@ -23,7 +23,7 @@ const Experience: React.FC<ExperienceProps> = ({ jobs }) => (
         className="py-12"
         id='experience'
     >
-        <h2 className="text-4xl font-bold mb-4 text-center text-blue-400 mb-6">Trayectoria Profesional</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center text-blue-400 mb-6">Experience</h2>
         <Carousel className="w-full max-w-[70vw] md:max-w-4xl mx-auto">
             <CarouselContent>
                 {jobs.map((job, index) => (

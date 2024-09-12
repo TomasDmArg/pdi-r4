@@ -30,7 +30,7 @@ const Projects: React.FC<ProjectsProps> = ({ achievements }) => (
         className="py-12"
         id='projects'
     >
-        <h2 className="text-4xl font-bold mb-4 text-center text-blue-400 mb-6">Logros Destacados</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center text-blue-400 mb-6">Achievements</h2>
         <Carousel className="w-full max-w-[70vw] md:max-w-4xl mx-auto">
             <CarouselContent>
                 {achievements.map((achievement, index) => (
